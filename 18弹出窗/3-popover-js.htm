@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>弹出框</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	</head>
+
+	<script>
+		$(function() {
+			$('[data-toggle="popover"]').popover({
+				html:true,
+				//title:"<h3><font color='red'>我是标题</font></h3>",
+				content:"<h3><font color='red'>我是内容</font></h3>",
+				placement:"left",
+				trigger:"hover"
+			})
+		})
+	</script>
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<br />
+				<br />
+				<br />
+				<br />
+
+				<div class="col-lg-6 col-lg-push-3">
+					<div class="input-group">
+						<label class="input-group-addon"><span class="glyphicon-briefcase glyphicon glyphicon-eye-open"></span>:</label>
+						<input type="text" class="form-control" placeholder="请输入用户名" data-toggle="popover"  />
+					</div>
+					<br />
+					<br />
+					<div class="input-group">
+						<label class="input-group-addon glyphicon glyphicon-flash"></label>
+						<input type="text" class="form-control" placeholder="请输入密码" data-toggle="popover"  />
+					</div>
+					<br />
+					<br />
+					
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>

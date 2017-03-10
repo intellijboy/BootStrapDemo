@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登录测试</title>
+	</head>
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.js"></script>
+	<script type="text/javascript" src="js/messages_zh.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+	<link rel="stylesheet" href="css/login.css" />
+
+	<body>
+		<p id="info"></p>
+		<form id="demoForm">
+
+			<fieldset>
+				<legend>用户登录</legend>
+
+				<p>
+					<label for="username">用户名</label>
+					<input type="text" id="username" name="username" />
+				</p>
+
+				<p>
+					<label for="password">密码</label>
+					<input type="password" id="password" name="password" />
+				</p>
+
+				<p>
+					<label for="confirm-password">确认密码</label>
+					<input type="password" id="confirm-password" name="confirm-password" />
+				</p>
+
+				<p>
+					<label for="confirm-password">邮箱</label>
+					<input type="text" id="email" name="email" class="txt" />
+				</p>
+
+				<p>
+					<label for="confirm-password">日期</label>
+					<input type="text" id="date" name="date" class="txt" />
+				</p>
+
+				<p>
+					<label for="confirm-password">正整数</label>
+					<input type="text" id="digital" name="digital" class="txt" />
+				</p>
+				
+				<p>
+					<label for="confirm-password">邮编</label>
+					<input type="text" id="youbian" name="youbian" />
+				</p>
+
+				<p>
+					<input type="submit" value="登录" />
+				</p>
+			</fieldset>
+		</form>
+		<button id="checkBtn">检验</button>
+	</body>
+
+</html>

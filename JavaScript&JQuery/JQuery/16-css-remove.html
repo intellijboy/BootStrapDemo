@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>清空节点</title>
+		<script src="../js/jquery-1.12.3.min.js"></script>
+		<style>
+			.redClass{
+				color: red;
+				font-size: 30px;
+			}
+			.bgClass{
+				background: gray;
+			}
+		</style>
+		<script language="JavaScript">
+			$(document).ready(function test() {
+				doAcquireCss();
+			})
+			function doAcquireCss(){
+				$("#txt").attr("class","redClass");
+				$("#txt").addClass("bgClass");
+				alert("追加样式成功");
+				$("#txt").removeClass("redClass");
+				alert("样式移出成功");
+			}
+		</script>
+	</head>
+
+	<body>
+		<span id="txt">我是红色的</span>
+	</body>
+
+</html>

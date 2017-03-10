@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>清空节点</title>
+		<script src="../js/jquery-1.12.3.min.js"></script>
+		<style>
+			.redClass{
+				color: red;
+				font-size: 30px;
+			}
+		
+		</style>
+		<script language="JavaScript">
+			$(document).ready(function test() {
+				doRemoveAttr();
+			})
+			function doRemoveAttr(){
+				$("#txt").removeAttr("class");
+				$("#txt").removeAttr("id");
+				alert("属性移出了");
+			}
+		</script>
+	</head>
+
+	<body>
+		<span class="redClass" id="txt">我是红色的</span>
+	</body>
+
+</html>

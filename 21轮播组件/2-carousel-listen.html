@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>轮播组件</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	</head>
+	<script>
+	var n = 0;
+		$(function(){
+			$("#carouselMenu").on("slid.bs.carousel",function(){
+				//alert("test");
+				$("#showMsg").html("轮播切换中...."+n++);
+			});
+		})
+		
+	</script>
+
+	<body>
+		<div class="container">
+			<br />
+			<br />
+			<h2 id="showMsg"><font color="red">show</font></h2>
+			<br />
+
+			<div class="row">
+				<div class="col-lg-6 col-lg-push-3">
+					<div class="carousel slide" id="carouselMenu">
+						<ul class="carousel-indicators">
+							<li data-target="#carouselMenu" data-slide-to="0"></li>
+							<li data-target="#carouselMenu" data-slide-to="1"></li>
+							<li data-target="#carouselMenu" data-slide-to="2"></li>
+							<li data-target="#carouselMenu" data-slide-to="3"></li>
+							<li data-target="#carouselMenu" data-slide-to="4"></li>
+						</ul>
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="carousel-caption">
+									第一个轮播图片
+								</div>
+								<img src="img/head10.jpg" />
+							</div>
+							<div class="item">
+								<div class="carousel-caption">
+									第二个轮播图片
+								</div>
+								<img src="img/head9.jpg" />
+							</div>
+							<div class="item">
+								<div class="carousel-caption">
+									第三个轮播图片
+								</div>
+								<img src="img/head8.jpg" />
+							</div>
+							<div class="item">
+								<div class="carousel-caption">
+									第四个轮播图片
+								</div>
+								<img src="img/head7.jpg" />
+							</div>
+						</div>
+						<a class="carousel-control left" href="#carouselMenu" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+						<a class="carousel-control right" href="#carouselMenu" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

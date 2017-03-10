@@ -1,0 +1,20 @@
+
+label.error {
+    margin-left: 10px;
+    color: red;
+    display: inline;
+    
+}
+input.error {
+    border: 1px solid red;
+}
+
+.wrongClass{
+	color: brown;
+	border:2px solid firebrick;
+}
+.rightClass{
+	color: green;
+	border:2px solid green;
+}
+

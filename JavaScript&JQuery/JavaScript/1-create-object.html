@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>JavaCript对象的创建</title>
+		<script src="js/jquery-1.12.3.min.js"></script>
+	</head>
+	<script>
+		function Student(name,age,sex,telphone){
+			this.name = name;
+			this.age = age;
+			this.sex = sex;
+			this.telphone = telphone;
+		}
+		function show(obj){
+			var i;
+			var k = 0;
+			var attrs = new Array("姓名：","年龄：","性别：","电话：");
+			for(i in obj){
+				document.write(attrs[k]+obj[i]+"<br />");
+				k++;
+			}
+		}
+		var stu = new Student("liuuru",18,'f',15270998540);
+		show(stu);
+	</script>
+	<body>
+		
+	</body>
+</html>

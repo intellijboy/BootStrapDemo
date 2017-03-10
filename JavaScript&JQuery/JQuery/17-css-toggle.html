@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>清空节点</title>
+		<script src="../js/jquery-1.12.3.min.js"></script>
+		<style>
+			.redClass{
+				color: red;
+				font-size: 30px;
+			}
+			.bgClass{
+				background: gray;
+			}
+		</style>
+		<script language="JavaScript">
+		
+			function doToggleClass(){
+				$("#txt").toggleClass("redClass");
+			}
+			
+		</script>
+	</head>
+
+	<body>
+		<span id="txt">我是红色的</span>
+		<button id="btn" onclick="doToggleClass()">toggle</button>
+	</body>
+
+</html>

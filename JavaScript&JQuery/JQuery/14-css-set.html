@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>清空节点</title>
+		<script src="../js/jquery-1.12.3.min.js"></script>
+		<style>
+			.redClass{
+				color: red;
+				font-size: 30px;
+			}
+			.bgClass{
+				background: pink;
+			}
+		</style>
+		<script language="JavaScript">
+			$(document).ready(function test() {
+				doSetClass();
+			})
+			function doSetClass(){
+				$("#txt").attr("class","redClass");
+				alert("设置样式成功");
+			}
+		</script>
+	</head>
+
+	<body>
+		<span id="txt">我是红色的</span>
+	</body>
+
+</html>

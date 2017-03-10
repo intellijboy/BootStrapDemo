@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>登录验证框架</title>
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<script type="text/javascript" src="js/jquery.validate.js" ></script>
+		<script type="text/javascript" src="js/messages_zh.js" ></script>
+		<script type="text/javascript" src="js/index.js" ></script>
+	</head>
+	<style>
+		.redClass {
+			border: 1px solid red;
+		}
+		
+		.greenClass {
+			border: 1px solid green;
+		}
+	</style>
+	
+	
+
+	<body>
+		<div class="container">
+			<div class="row col-lg-8 col-lg-push-2">
+				<form id="myform" method="post">
+					<fieldset>
+						<legend><label><span class="glyphicon glyphicon-user"></span>用户注册</label></legend>
+						<div class="row">
+							<label class="col-lg-2 col-lg-push-1">用户名:</label>
+							<input id="name" name="name" class="col-lg-4" placeholder="请输入用户名" />
+						</div>
+
+						<div class="row">
+							<label class="col-lg-2 col-lg-push-1">密&nbsp;&nbsp;&nbsp;码:</label>
+							<input id="password1" name="password1" class="col-lg-4" placeholder="请输入密码" type="password"/>
+						</div>
+						
+						<div class="row">
+							<label class="col-lg-2 col-lg-push-1">确认密码:</label>
+							<input id="password2" name="password2" class="col-lg-4" placeholder="确认密码" type="password"/>
+						</div>
+
+						<div class="row">
+							<label class="col-lg-2 col-lg-push-1">邮&nbsp;&nbsp;&nbsp;箱:</label>
+							<input id="email" class="col-lg-4" name="email" placeholder="请输入邮箱" />
+						</div>
+
+						<div class="input-group col-lg-4 col-lg-push-2" style="margin-top: 10px;">
+							<input type="submit" value="提交" class="btn btn-primary" />
+							<input type="reset" value="重置" class="btn btn-warning" />
+
+						</div>
+
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</body>
+
+
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>轮播组件</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	</head>
+	<script>
+		$(function(){
+			$("#carouselMenu").carousel({
+				interval:4000,
+				wrap:true
+			});
+		})
+		
+	</script>
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="carousel slide" id="carouselMenu">
+						<ul class="carousel-indicators">
+							<li data-target="#carouselMenu" data-slide-to="0"></li>
+							<li data-target="#carouselMenu" data-slide-to="1"></li>
+							<li data-target="#carouselMenu" data-slide-to="2"></li>
+							<li data-target="#carouselMenu" data-slide-to="3"></li>
+						</ul>
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="carousel-caption">
+									第一个轮播图片
+								</div>
+								<img src="img/head10.jpg" />
+							</div>
+							<div class="item">
+								<div class="carousel-caption">
+									第二个轮播图片
+								</div>
+								<img src="img/head9.jpg" />
+							</div>
+							<div class="item">
+								<div class="carousel-caption">
+									第三个轮播图片
+								</div>
+								<img src="img/head8.jpg" />
+							</div>
+							<div class="item">
+								<div class="carousel-caption">
+									第四个轮播图片
+								</div>
+								<img src="img/head7.jpg" />
+							</div>
+						</div>
+						<a class="carousel-control left" href="#carouselMenu" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+						<a class="carousel-control right" href="#carouselMenu" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>选项卡测试</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	</head>
+
+	<script>
+		/*设置第一个标签页默认页显示标签内容*/
+		$(function(){	
+			
+			$("ul li:eq(0) a").tab("show");
+			
+			
+			$("a[data-toggle='tab']").bind("shown.bs.tab",function(e){
+				
+				var activeText = $(e.target).text();
+				var preText = $(e.relatedTarget).text();
+				alert("当前："+activeText+"    前一个："+preText);
+			});
+		})
+	</script>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-lg-push-3">
+					<ul class=" nav nav-tabs ">
+						<li><a href="#panel1" data-toggle="tab" >首页</a></li>
+						<li><a href="#panel2" data-toggle="tab">后台语言</a></li>
+						<li><a href="#panel3" data-toggle="tab">前台语言</a></li>
+						<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">其他语言<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#panel4" data-toggle="tab">MYSQL</a></li>
+								<li><a href="#panel5" data-toggle="tab">ORacle</a></li>
+								<li><a href="#panel6" data-toggle="tab">SQL</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane fade" id="panel1">
+							欢迎来到首页
+						</div>
+						
+						<div class="tab-pane fade" id="panel2">
+							后台语言有：Java,C#,Servlet,JSP,JSTL,Spring,Hibernate
+						</div>
+						
+						<div class="tab-pane fade" id="panel3">
+							前台语言有：HTML,HTML5,人机交互
+						</div>
+						
+						<div class="tab-pane fade" id="panel4">
+							Mysql数据库是小型轻量级的数据库
+						</div>
+						
+						<div class="tab-pane fade" id="panel5">
+							Oracle数据库是大型高端的数据库
+						</div>
+						
+						<div class="tab-pane fade" id="panel6">
+							Sql是微软的中型数据库
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

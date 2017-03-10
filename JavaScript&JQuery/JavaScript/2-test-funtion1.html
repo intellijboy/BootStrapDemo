@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>JavaCript对象的创建</title>
+		<script src="js/jquery-1.12.3.min.js"></script>
+	</head>
+	<script>
+		function add(x,y){
+			var result = x+y;
+			return result;
+		}
+		function show(){
+		var rs = add(8,4);
+		alert("result="+rs);
+	//	document.getElementById("show").innerHTML="结果为："+rs;
+		}
+		
+//		show();
+//		$(document).ready(function(){
+//			show(); 
+//		})
+
+	//页面全部加载完全是在调用此方法
+//	window.onload = function test(){
+//		show();
+//	}
+	</script>
+
+	<body>
+		<span id="show">结果：</span>
+	</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>工具提示</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	</head>
+	<script>
+		$(function() {
+			$("[data-toggle='tooltip']").tooltip({
+				trigger:"hover",
+				delay:{show:100,hide:500},
+				html:true,
+				title:"<h2>我是一个很漂亮的按钮</h2>",
+				placement:"right"
+			});
+			$("[data-toggle='tooltip']").bind("shown.bs.tooltip",function(){
+				alert("tooltip 显示完毕");
+			})
+		})
+	</script>
+
+	<body>
+		<br /><br /><br /><br /><br /><br /><br />
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-pull-3">
+					<span class="btn btn-primary" data-toggle="tooltip" >按我提示</span>
+				</div>
+			</div>
+			
+		</div>
+		
+	</body>
+
+</html>

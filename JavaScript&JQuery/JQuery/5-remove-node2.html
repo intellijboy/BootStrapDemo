@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>删除节点</title>
+		<script src="../js/jquery-1.12.3.min.js"></script>
+		<script language="JavaScript">
+			$(document).ready(function test() {
+				var li_2 = $("ul li:eq(1)");
+				var $removedNodd =  li_2.remove();		//removedNode指向被删除节点
+				$("ul").append($removedNodd);
+				alert("第二个被删除后，又添加进来了");
+			})
+		</script>
+	</head>
+
+	<body>
+		<ul>
+			<li>第一个</li>
+			<li>第二个</li>
+			<li>第三个</li>
+		</ul>
+	</body>
+
+</html>

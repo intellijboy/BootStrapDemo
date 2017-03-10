@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<!--有错误-->
+	<head>
+		<meta charset="utf-8">
+		<title>清空节点</title>
+		<script src="../js/jquery-1.12.3.min.js"></script>
+		<style>
+			.myDiv {
+				left: 0px;
+				width: 200px;
+				height: 200px;
+				background: pink;
+			}
+		</style>
+		<script language="JavaScript">
+		    var clientWidth = document.documentElement.clientWidth;
+			var myDiv = document.getElementById("mydiv");
+			var d = 10;
+			function doAnimation() {
+				$("#mydiv").css("margin-left",d+"px");
+				d = d+10;
+				if(d>clientWidth){
+					d = 0;
+				}
+			}
+			setInterval(doAnimation, 100);
+		</script>
+	</head>
+
+	<body>
+		<div class="myDiv" id="mydiv"></div>
+	</body>
+
+</html>

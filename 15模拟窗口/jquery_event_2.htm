@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+					<!--直接绑定对象进行监听并执行操作-->
+	<head>
+		<meta charset="utf-8">
+		<title>测试javascript代码</title>
+		<script type="text/javascript" src="js/jquery-1.12.3.min.js" ></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#btn").click(fun);
+			})
+			function fun(){
+				alert("HELLO");
+			}
+		</script>
+	</head>
+
+	<body>
+		<button id="btn">press me</button>
+	</body>
+
+</html>

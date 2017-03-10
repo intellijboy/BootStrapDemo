@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>使用Jquery验证表单</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="js/form_rule.js"></script>
+	</head>
+<style>
+	.tip{
+		
+	}
+</style>
+	<script>
+		$(function() {
+			validata("userName");
+			validata("userPass");
+			validata("userAge");
+			validata("userEmail");
+			$("input[type='reset']").bind("click", function() {
+				$("div>input").removeClass("validata_error");
+				$("div>input").removeClass("validata_sucess");
+				$(".tip").html("");
+				$(".tip").html("");
+			});
+		})
+
+		function doSubmit() {
+			return flag;
+		}
+	</script>
+
+	<body>
+		<div class="container">
+			<div style="height: 50px;"></div>
+			<div class="row">
+				<div class="col-lg-10 col-lg-push-1">
+					<div class="panel panel-default">
+						<div class="panel-heading" id="loginTip"><span class="glyphicon glyphicon-user"></span>用户登陆</div>
+						<div class="panel-body">
+							<form action="" id="myform">
+								<div class="row" style="margin-bottom: 50px; margin-top: 20px;">
+									<div class="col-lg-2"></div>
+									<div class="col-lg-7 ">
+										<div class="input-group">
+											<label class="input-group-addon">用户名</label>
+											<input type="text" class="form-control" placeholder="输入用户名" id="userName" />
+										</div>
+									</div>
+									<div class="col-lg-2">
+										<div id="userNameInfo" class="tip"></div>
+									</div>
+								</div>
+								<div class="row" style="margin-bottom: 50px;">
+									<div class="col-lg-2"></div>
+									<div class="col-lg-7 ">
+										<div class="input-group">
+											<label class="input-group-addon">密&nbsp;&nbsp;&nbsp;码</label>
+											<input type="password" class="form-control" placeholder="输入用密码" id="userPass" />
+										</div>
+									</div>
+									<div class="col-lg-2">
+										<div id="userPassInfo" class="tip"></div>
+									</div>
+								</div>
+								<div class="row" style="margin-bottom: 50px;">
+									<div class="col-lg-2"></div>
+									<div class="col-lg-7 ">
+										<div class="input-group">
+											<label class="input-group-addon">年&nbsp;&nbsp;&nbsp;龄</label>
+											<input type="text" class="form-control" placeholder="输入您的年龄(1-120)" id="userAge" />
+										</div>
+									</div>
+									<div class="col-lg-2">
+										<div id="userAgeInfo" class="tip"></div>
+									</div>
+								</div>
+								<div class="row" style="margin-bottom: 50px;">
+									<div class="col-lg-2"></div>
+									<div class="col-lg-7 ">
+										<div class="input-group">
+											<label class="input-group-addon">邮&nbsp;&nbsp;&nbsp;箱</label>
+											<input type="email" class="form-control" placeholder="QQ邮箱/网易邮箱/网易邮箱/163邮箱" id="userEmail" />
+										</div>
+									</div>
+									<div class="col-lg-2">
+										<div id="userEmailInfo" class="tip"></div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-4"></div>
+									<div class="col-lg-4">
+										<input type="submit" value="提交" class="btn btn-primary" />
+										<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+										<input type="reset" value="重置" class="btn btn-danger" />
+									</div>
+									<div class="col-lg-4"></div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

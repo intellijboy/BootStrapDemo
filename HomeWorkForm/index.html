@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>表单填写</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+	</head>
+	<link rel="stylesheet" href="css/index.css" />
+	<script type="text/javascript" src="js/conmon.js"></script>
+	<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script src="js/validate.js"></script>
+
+
+	<body>
+		<div class="wrap">
+			<h2 id="info">Sign Up Today</h2>
+			<p><strong>Race fee</strong>: $216 </p>
+			<p>Make check payable to the Happy Trails Running Club</p>
+			<p><strong>Note</strong>: We recommend that you seek your doctor's and family's approval before you sign up. Race fees are not refundable. </p>
+			<form>
+				<p>&nbsp;</p>
+				<div class="input-group">
+					<span class="input-group-addon btn-default btn">用户名&nbsp;&nbsp;&nbsp;</span>
+					<input id="userName" type="text" class="form-control" placeholder="请输入用户名" required="required" data-toggle="tooltip" />
+				</div>
+				<p id="userNameInfo">&nbsp;</p>
+				<div class="input-group">
+					<span class="input-group-addon btn-default btn">电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话</span>
+					<input id="telphone" type="tel" class="form-control" placeholder="请输入电话" required="required" />
+				</div>
+				<p id="phoneInfo">&nbsp;</p>
+				<div class="input-group">
+					<span class="input-group-addon btn-default btn">电子邮件</span>
+					<input id="email" type="email" class="form-control" placeholder="请输入电子邮件" />
+				</div>
+				<p id="emailInfo">&nbsp;</p>
+				<div class="input-group">
+					<span class="input-group-addon btn-default btn">日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;期</span>
+					<input id="date" type="text" class="form-control" placeholder="MM-dd-yy" />
+				</div>
+				<p id="dateInfo">&nbsp;</p>
+
+				<div style="margin: 20px;">
+					<fieldset>
+						<legend>T-shirt Size: </legend>
+						<div>
+							<input id="small" type="radio" name="tshirt" value="small">
+							<label for="small">Small</label>
+						</div>
+						<div>
+							<input id="medium" type="radio" name="tshirt" value="medium">
+							<label for="medium">Medium</label>
+						</div>
+						<div>
+							<input id="large" type="radio" name="tshirt" value="large">
+							<label for="large">Large</label>
+						</div>
+						<div class="input-group">
+							<label for="style" class="input-group-addon">Shirt style:</label>
+							<input id="style" name="style" type="text" class="form-control" list="stylelist" title="Years of participation" placeholder="输入<颜色>获取自动提示">
+							<datalist id="stylelist">
+								<option value="白色" label="白色">
+									<option value="黑色" label="黑色">
+										<option value="红色" label="红色">
+											<option value="蓝色" label="蓝色">
+												<option value="紫色" label="紫色">
+													<option value="紫色" label="紫色">
+														<option value="紫色" label="紫色">
+															<option value="紫色" label="紫色">
+
+							</datalist>
+						</div>
+
+					</fieldset>
+
+					<fieldset>
+						<legend>Expectations:</legend>
+						<div class="input-group">
+							<label for="confidence" class="input-group-addon">Confidence:</label>
+							<input id="confidence" name="level" class="form-control" type="range" min="0" max="100" step="5" value="50">
+						</div>
+
+						<div style="text-align: center;">
+							<span id="confidenceDisplay">50%</span>
+						</div>
+						<div class="input-group">
+							<label for="notes" class="input-group-addon">Notes:</label>
+							<textarea id="notes" name="notes" class="form-control" maxLength="180" style="resize: none;"></textarea>
+						</div>
+					</fieldset>
+					<div style="text-align: center;padding-top: 20px;">
+						<input id="submitBtn" type="button" class="btn btn-info" value="提交表单" data-toggle="modal" data-target="#MyModal" />
+					</div>
+			</form>
+			</div>
+		</div>
+
+		<!--我的弹出模态窗口-->
+		<div class="modal fade" id="MyModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="close" data-dismiss="modal"><span>&times;</span></button>
+					</div>
+					<div class="modal-title">表单信息</div>
+					<div class="modal-body">
+						<table class="table table-bordered table-hover" id="allMsg">
+						</table>
+					</div>
+					<div class="modal-footer">
+						<a class="btn btn-primary" data-dismiss="modal">关闭</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

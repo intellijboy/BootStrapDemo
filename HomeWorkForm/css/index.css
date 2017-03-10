@@ -1,0 +1,17 @@
+.body{
+    background: black;
+}
+.wrap{
+	background: #EEEEEE;
+	margin: 0 auto;
+    width: 480px;
+    height: 900px;
+	border: solid #CCCCCC 10px;
+	border-radius: 20px;
+	padding-left: 10px;
+}
+.formClass{
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
